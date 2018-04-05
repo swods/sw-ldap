@@ -55,3 +55,6 @@ $ldap = new Ldap([
 $ldap->search('user');
 ```
 
+### NOTICE
+
+Be sure with correct `base_dn` if your account don't have right to search you will get error on ldap_serach()

@@ -53,7 +53,6 @@ class Ldap
             throw new \Exception('Login & password must be set');
         }
 
-        var_dump($this->ldap_connect, $ldap_login, $ldap_password);
         return @ldap_bind($this->ldap_connect, $ldap_login, $ldap_password);
     }
 

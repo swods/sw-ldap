@@ -67,6 +67,11 @@ Be sure with correct `base_dn` if your account don't have right to search you wi
 Change Log
 ==========================
 
+1.1.2 11.04.2018
+-----------------------
+
+- Fix #0: Some stupid mistakes
+
 1.1.0 11.04.2018
 -----------------------
 

@@ -20,12 +20,11 @@ class Ldap
         ];
 
         $this->attributes = array_merge($this->attributes, $config);
-        
         if (empty($this->ldap_connect = ldap_connect($this->domain, $this->ldapPort))) {
             throw new \Exception('LDAP connection fail');
         }
 
-        if (!empty($this->ldapConfig)) {
+        if (is_array($this->ldapConfig)) {
             foreach ($this->ldapConfig as $const => $value) {
                 ldap_set_option($this->ldap_connect, $const, $value);
             }
@@ -54,7 +53,7 @@ class Ldap
             throw new \Exception('Login & password must be set');
         }
 
-        $ldap_login = sprintf('%s@%s', $ldap_login, $this->domain);
+        var_dump($this->ldap_connect, $ldap_login, $ldap_password);
         return @ldap_bind($this->ldap_connect, $ldap_login, $ldap_password);
     }
 

@@ -60,6 +60,7 @@ $ldap->search('user');
 $ldap->search('user2', 'user2', 'password');
 ```
 
+<<<<<<< HEAD
 Change Log
 ==========================
 
@@ -69,3 +70,8 @@ Change Log
 - Bug #3: Function `empty()` won't work with `__get()`, changet to `is_array()`
 - Chg #2: Example in README was changed: keys in `ldapConfig` must be as constant. Plus some text updates
 - Chg #1: `login` no more converts to login@domain, you have to do it by you self, it was changed because AD & OpenLDAP have difference in `login` constructions
+=======
+### NOTICE
+
+Be sure with correct `base_dn` if your account don't have right to search you will get error on ldap_serach()
+>>>>>>> c28ab71e745961c1f3241b626fa6c81e9a329d99

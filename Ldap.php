@@ -10,7 +10,6 @@ class Ldap
 {
     private $ldap_connect;
     private $attributes;
-    private $data_data;
 
     function __construct($config) 
     {
